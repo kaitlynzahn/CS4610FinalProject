@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour
     private void StartNewGame()
     {
         timeLimit = 80;
-        reduceLimitBy = 5;
+        reduceLimitBy = 10;
         startTime = DateTime.Now;
 
         score = 0;

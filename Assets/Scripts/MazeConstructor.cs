@@ -9,7 +9,7 @@ public class MazeConstructor : MonoBehaviour
     [SerializeField] private Material mazeMat1;
     [SerializeField] private Material mazeMat2;
     [SerializeField] private Material startMat;
-    [SerializeField] private Material treasureMat;
+    public GameObject treasureChest;
 
     public int[,] data
     {
@@ -164,20 +164,23 @@ public class MazeConstructor : MonoBehaviour
         TriggerEventRouter tc = go.AddComponent<TriggerEventRouter>();
         tc.callback = callback;
     }
-
+    
+    
     private void PlaceGoalTrigger(TriggerEventHandler callback)
     {
-        GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        go.transform.position = new Vector3(goalCol * hallWidth, .5f, goalRow * hallWidth);
-        go.name = "Treasure";
-        go.tag = "Generated";
+        GameObject treasure = (GameObject)Instantiate(treasureChest, new Vector3(goalCol * hallWidth, 0f, goalRow * hallWidth), Quaternion.Euler(-90f, 0f, 0f));
+        treasure.transform.localScale = new Vector3(2f, 2f, 2f);
+        
+        treasure.name = "Treasure";
+        treasure.tag = "Generated";
 
-        go.GetComponent<BoxCollider>().isTrigger = true;
-        go.GetComponent<MeshRenderer>().sharedMaterial = treasureMat;
+        treasure.AddComponent<BoxCollider>();
+        treasure.GetComponent<BoxCollider>().isTrigger = true;
 
-        TriggerEventRouter tc = go.AddComponent<TriggerEventRouter>();
+        TriggerEventRouter tc = treasure.AddComponent<TriggerEventRouter>();
         tc.callback = callback;
     }
+    
 
     // top-down debug display
     void OnGUI()
