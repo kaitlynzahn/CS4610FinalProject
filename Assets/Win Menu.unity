@@ -1128,6 +1128,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1811320469}
   - component: {fileID: 1811320470}
+  - component: {fileID: 1811320472}
+  - component: {fileID: 1811320471}
   m_Layer: 5
   m_Name: You Win Menu
   m_TagString: Untagged
@@ -1170,6 +1172,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bb1dce1a83649bb9a0d848fc2a7ed0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1811320471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811320468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38890f759500e455b8d86095c14bf863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  timeLabel: {fileID: 0}
+  scoreLabel: {fileID: 0}
+--- !u!114 &1811320472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811320468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37834c4099e2548dfb6334b6b64ae008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDebug: 0
+  mazeMat1: {fileID: 0}
+  mazeMat2: {fileID: 0}
+  startMat: {fileID: 0}
+  treasureChest: {fileID: 0}
 --- !u!1 &1818897071
 GameObject:
   m_ObjectHideFlags: 0
