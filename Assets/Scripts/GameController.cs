@@ -72,6 +72,7 @@ public class GameController : MonoBehaviour
         {
             timeLabel.text = timeLeft.ToString();
         }
+        // if you lose
         else
         {
             SceneManager.LoadScene(2);
@@ -85,12 +86,13 @@ public class GameController : MonoBehaviour
     private void OnGoalTrigger(GameObject trigger, GameObject other)
     {
         Debug.Log("Goal!");
-        goalReached = true;
-
-        score += 1;
-        scoreLabel.text = score.ToString();
-
-        Destroy(trigger);
+//        goalReached = true;
+//
+//        score += 1;
+//        scoreLabel.text = score.ToString();
+//
+//        Destroy(trigger);
+SceneManager.LoadScene(3);
     }
 
     private void OnStartTrigger(GameObject trigger, GameObject other)
