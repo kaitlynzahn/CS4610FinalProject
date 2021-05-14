@@ -4,6 +4,9 @@ CS 4610 Final Project
 # Demo
 Youtube Link: https://youtu.be/i0Q4JU9Vtok
 
+# To Run
+- Open project in Unity. Select "Menu" scene in Project area. Click the play button to run the game.
+
 # Project Description:
 - Our game is called “Mermaid Maze”. It is a first person game where the user is placed inside a procedurally generated underwater maze. The goal of the game is to find the hidden treasure chest before the timer runs out. The game features multiple scenes with navigation options for the user.
 - WASD or the arrows are used to move the character, your mermaid, around the maze.
